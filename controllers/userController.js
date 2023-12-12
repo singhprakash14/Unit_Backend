@@ -47,13 +47,13 @@ async function login(req, res, next) {
   }
 }
 
-function logout(req, res) {
-  res.clearCookie("accessToken", {
-    sameSite: "none",
-    secure: true
-  }).status(200).send("User has been logged out.");
+// function logout(req, res) {
+//   res.clearCookie("accessToken", {
+//     sameSite: "none",
+//     secure: true
+//   }).status(200).send("User has been logged out.");
 
-  console.log("Logged out");
-}
+//   console.log("Logged out");
+// }
 
-module.exports = { register, login, logout };
+module.exports = { register, login };
